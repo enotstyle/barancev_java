@@ -40,4 +40,8 @@ public class ContactHelper extends HelperBase {
     public void submitContactModification() {
         click(By.name("update"));
     }
+
+    public int getGroupCount() {
+        return wd.findElements(By.className("group")).size();
+    }
 }
