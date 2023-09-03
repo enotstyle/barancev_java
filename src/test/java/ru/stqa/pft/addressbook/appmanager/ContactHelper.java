@@ -41,7 +41,5 @@ public class ContactHelper extends HelperBase {
         click(By.name("update"));
     }
 
-    public int getGroupCount() {
-        return wd.findElements(By.className("group")).size();
-    }
+
 }
