@@ -9,7 +9,7 @@ public class Snippet {
     void selectors_examples() {
         // поиск элемента внутри другого элемента
         wd.findElement(By.tagName("input1")).findElement(By.tagName("input2"));
-    }        before.add(group);
+    }
 
 
 
