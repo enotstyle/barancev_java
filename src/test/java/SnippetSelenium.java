@@ -1,7 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class Snippet {
+public class SnippetSelenium {
 
 
     ChromeDriver wd = new ChromeDriver();
