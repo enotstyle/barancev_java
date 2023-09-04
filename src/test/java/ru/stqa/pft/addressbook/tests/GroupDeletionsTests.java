@@ -11,6 +11,7 @@ import java.util.List;
 import java.util.Set;
 
 import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
 
 public class GroupDeletionsTests extends TestBase {
 
@@ -27,10 +28,8 @@ public class GroupDeletionsTests extends TestBase {
         Groups before = app.group().all();
         GroupData deletedGroup = before.iterator().next();
         app.group().delete(deletedGroup);
+        assertThat(app.group().count(), equalTo(before.size() - 1));
         Groups after = app.group().all();
-        Assert.assertEquals(after.size(), before.size() - 1);
-
-
         assertThat(after, Matchers.equalTo(before.without(deletedGroup)));
 
     }
