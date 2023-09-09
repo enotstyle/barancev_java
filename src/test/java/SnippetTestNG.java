@@ -13,32 +13,31 @@ public class SnippetTestNG {
     // запускается каждый раз перед методом с аннотацией @Test
     @BeforeMethod(enabled = false)
     void test1() {
-        System.out.println("hi");
+        System.out.println("BeforeMethod");
     }
 
     // Метод с этой аннотацией выполнится перед первым тестовым методом в текущем классе.
     @BeforeClass(enabled = false)
     void test2() {
-        System.out.println("hi");
+        System.out.println("BeforeClass");
     }
 
     // запускается один раз перед определенной группой тестов (тестые методы сначала нужно включить в группу)
-    @BeforeGroups(enabled = false)
+    @BeforeGroups(value = "group1", enabled = false)
     void test3() {
-        System.out.println("hi");
+        System.out.println("BeforeGroups");
     }
 
     // Выполняется перед запуском всех тестов в тестовом сьюте
     @BeforeSuite(enabled = false)
     void test4() {
-        System.out.println("hi");
+        System.out.println("BeforeSuite");
     }
 
-
-    // Выполняется перед запуском всех тестов в тестовом сьюте
+    // Выполняется перед запуском всех тестов которые внутри тэга <test> в сьюте
     @BeforeTest(enabled = false)
     void test5() {
-        System.out.println("hi");
+        System.out.println("BeforeTest");
     }
 
 
